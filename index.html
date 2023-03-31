@@ -15,10 +15,10 @@
     <div class="container">
       <form>
         <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" id="search-box" placeholder="Search Item" />
+        <input type="text" id="search-box" placeholder="Search Item" onkeyup="search()" />
       </form>
 
-      <div class="product-list">
+      <div class="product-list" id="product-list">
         <div class="product">
           <img
             src="https://imgs.search.brave.com/PpGbPjFUZd5NrnxAxIIUIw50-i-lF9VRfjTWEOd5G28/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9raW5n/ZG9vZGxlLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMjAxOS8x/MS9CbGFja19Qcmlu/dG8uanBn"
@@ -30,10 +30,27 @@
             <p>$4</p>
          </div>
         </div>
-      </div>
+     
 
 
-      <div class="product-list">
+
+     
+        <div class="product">
+          <img
+          src="https://imgs.search.brave.com/XR1xzawjLzzkc4MOgNS0bmb-oP72yMtlNnYskZ2SJaQ/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9pNS53/YWxtYXJ0aW1hZ2Vz/LmNvbS9hc3IvNTQ5/NGJhNzItNmJmZS00/NTMxLWJiYmMtMjQ4/OWE3ZGRjNTk3XzEu/OTAwODg3MzA5OWVj/MjkzM2RiNmQ2ZmU3/NGUwYzk4YTEuanBl/Zw"
+            alt=""
+            
+          />
+         <div class="product-details">
+            <h2>
+              Timex Men's Harborside Tan/Blue</h2>
+            <p>$50</p>
+         </div>
+        </div>
+      
+
+
+      
         <div class="product">
           <img
             src="https://imgs.search.brave.com/Xi9n4PmzQkPKFteHCU1G2nvWi9R503HvXWqKduTmEYs/rs:fit:474:632:1/g:ce/aHR0cHM6Ly9pNS53/YWxtYXJ0aW1hZ2Vz/LmNvbS9hc3IvM2M5/MmM4MTktNDY4Zi00/ZWRkLTgwOTgtNTUx/YTE2ZWE5ZjFjLmE4/ODA5YjU1YTEwMzhj/OGY1MTEzOTQ0M2Nk/OWU5MmRiLmpwZWc"
@@ -45,9 +62,8 @@
             <p>$8</p>
          </div>
         </div>
-      </div>
+      
 
-      <div class="product-list">
         <div class="product">
           <img
             src="https://imgs.search.brave.com/Gu-Bh7y0x1N9GZYIU4f7-BcqYxtgYGyuocjlvR7pwYI/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9zMy5h/bWF6b25hd3MuY29t/L2ltYWdlcy5lY3dp/ZC5jb20vaW1hZ2Vz/LzE3MjMzMDY4LzE3/MTE1MDgxNTUuanBn"
@@ -59,41 +75,8 @@
             <p>$5</p>
          </div>
         </div>
-      </div>
+   
 
-      <div class="product-list">
-        <div class="product">
-          <img
-          src="https://imgs.search.brave.com/cJbn8VJ9y6XyK9TphwtBwfjLedQRPUhZu9p6I8GXegU/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9jZG4x/LmJhbWJpbmlmYXNo/aW9uLmNvbS9pbWcv/cC8xLzgvMy85Lzgv/Mi8xODM5ODItLXBy/b2R1Y3QuanBn"
-            alt=""
-            
-          />
-         <div class="product-details">
-            <h2> Nike T-Shirt </h2>
-            <p>$10</p>
-         </div>
-        </div>
-      </div>
-
-
-      <div class="product-list">
-        <div class="product">
-            <img
-            src="https://imgs.search.brave.com/hPcqKPjQ1zdr4MvsVZm8UXtCNw7JdEGsQER0z1hVF5M/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9zbmVh/a2Vycy1tYWdhemlu/ZS5jb20vd3AtY29u/dGVudC91cGxvYWRz/LzIwMjAvMDgvbmlr/ZS1zYi1kdW5rLWxv/dy1wcm8tY2hpY2Fn/by1icTY4MTctNjAw/LTE5MjB4MTI4MC5q/cGc"
-            alt=""
-            
-          />
-         <div class="product-details">
-            <h2>
-              Nike SB Dunk Low Pro</h2>
-            <p>$395</p>
-         </div>
-        </div>
-      </div>
-
-
-
-      <div class="product-list">
         <div class="product">
           <img
           src="https://imgs.search.brave.com/GmuYKVw8E3oCvoEwpWeLqXmKJAB6JFJaUdFV5MN9gKw/rs:fit:1200:1067:1/g:ce/aHR0cHM6Ly9zdGF0/aWMuaGlnaHNub2Jp/ZXR5LmNvbS90aHVt/Ym9yL3V6WUVJd3Nt/Y09NeXFDVmJNWDh0/eHRSQWozMD0vMTYw/MHgxMDY3L3N0YXRp/Yy5oaWdoc25vYmll/dHkuY29tL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDIxLzAxLzA1/MTQxMDAwL25pa2Ut/ZHVuay1uaWtlLWJ5/LXlvdS0yMDIxLTAx/LmdpZg.gif"
@@ -105,9 +88,25 @@
             <p>$355</p>
          </div>
         </div>
-      </div>
+    
+      
 
-      <div class="product-list">
+     
+        <div class="product">
+          <img
+          src="https://imgs.search.brave.com/rOb2LF07fHJt8dhB7N8e6djBIJ43EByDQmhCoEWPt2A/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9vZmZ0/aGVoaWdoc3RyZWV0/LmNvLnVrL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDIwLzExL1Ry/b3VzZXItR3JleS1G/cm9udC0yNjk1Lmpw/Zw"
+            alt=""
+            
+          />
+         <div class="product-details">
+           <h2>Boys Grey Slim School Trouser</h2>
+            
+            <p>$65</p>
+         </div>
+        </div>
+     
+
+      
         <div class="product">
           <img
           src="https://imgs.search.brave.com/HcFr2PZiMjMZk0vmN4kAa_FfDC1t8A5lKiQ2YB80pEQ/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9pOC5h/bXBsaWVuY2UubmV0/L2kvanBsL2pkXzA1/ODMxOF9hP3FsdD05/Mg"
@@ -120,7 +119,47 @@
             <p>$65</p>
          </div>
         </div>
+     
+
+      
+        <div class="product">
+          <img
+          src="https://imgs.search.brave.com/cJbn8VJ9y6XyK9TphwtBwfjLedQRPUhZu9p6I8GXegU/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9jZG4x/LmJhbWJpbmlmYXNo/aW9uLmNvbS9pbWcv/cC8xLzgvMy85Lzgv/Mi8xODM5ODItLXBy/b2R1Y3QuanBn"
+            alt=""
+            
+          />
+         <div class="product-details">
+            <h2> Nike T-Shirt </h2>
+            <p>$10</p>
+         </div>
+        </div>
+  
+
+
+     
+        <div class="product">
+            <img
+            src="https://imgs.search.brave.com/hPcqKPjQ1zdr4MvsVZm8UXtCNw7JdEGsQER0z1hVF5M/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9zbmVh/a2Vycy1tYWdhemlu/ZS5jb20vd3AtY29u/dGVudC91cGxvYWRz/LzIwMjAvMDgvbmlr/ZS1zYi1kdW5rLWxv/dy1wcm8tY2hpY2Fn/by1icTY4MTctNjAw/LTE5MjB4MTI4MC5q/cGc"
+            alt=""
+            
+          />
+         <div class="product-details">
+            <h2>
+              Nike SB Dunk Low Pro</h2>
+            <p>$395</p>
+         </div>
+        </div>
+
+
       </div>
+
+
+
+
+    
     </div>
+    <script src="/index.js"></script>
+
   </body>
+  
 </html>
