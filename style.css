@@ -48,15 +48,20 @@ body{
     
 }
 
+.product-list{
+    margin-top: 25px;
+}
+
 .product{
 display: flex;
-justify-content: center;
+/* justify-content: center; */
 cursor: pointer;
-margin-top: 25px;
+
 }
 
 .product img{
     width: 80px;
+    object-fit: cover;
 }
 
 .product-details{
